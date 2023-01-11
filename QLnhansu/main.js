@@ -1,0 +1,16 @@
+"use strict";
+exports.__esModule = true;
+var employManager_1 = require("./employManager");
+var employ_1 = require("./employ");
+var employee1 = new employ_1.Employee('Tran', "Hung1", "1/1", "ha noi", "staff");
+var employee2 = new employ_1.Employee('Tran', "Hung2", "2/1", "nam dinh", "staff");
+var employee3 = new employ_1.Employee('Tran', "Hung3", "3/1", "nam dinh", "manager");
+var employee4 = new employ_1.Employee('Tran', "Hung4", "4/1", "ha tay", "leader");
+var manager = new employManager_1.EmployeeManager();
+manager.add(employee1);
+manager.add(employee2);
+manager.add(employee3);
+manager.add(employee4);
+console.table(manager.display());
+manager.Delete('Tran', 'Hung1');
+console.table(manager.display());
